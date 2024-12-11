@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario de la Tia Vero</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Recetario de la Tia Vero</h1>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Agregar Receta</a></li>
+                    <li><a href="#">Recetas</a></li>
+                </ul>
+            </nav>    
+        </div>
+        <div>
+            <form id="buscar-receta">
+                <input type="text" placeholder="Buscar por título">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        </header>
+    <main>
+        <section>
+            <h2>Agregar Receta</h2>
+            <form id="agregar-receta">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+                <label for="ingredientes">Ingredientes:</label>
+                <textarea id="ingredientes" name="ingredientes" required></textarea>
+                <label for="instrucciones">Pasos:</label>
+                <textarea id="instrucciones" name="instrucciones" required></textarea>
+                <label for="categoria">Categoría:</label>
+                <input type="text" id="categoria" required>
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" required></label>
+                <button type="submit">Agregar Receta</button>
+            </form>
+        </section>
+        <article>
+            <h2>Recetas</h2>
+            <ul id="recetas">
+
+            </ul>
+        </article>
+
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
