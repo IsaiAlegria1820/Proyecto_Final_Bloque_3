@@ -56,9 +56,12 @@ function mostrarRecetas() {
 
 //se elimina la receta
 function eliminarReceta(id){
-    recetas = recetas.filter(receta => receta.id !== id);
-    mostrarRecetas(); // Refresh the displayed list after deletion
-    alert("Receta Eliminada");
+    for (let i = 0; i < recetas.length; i++) {
+        if(recetas[i].id===id){
+            recetas.splice(i ,1);
+            mostrarRecetas();
+        }
+    }     
 }   
 
 function buscarReceta() {
