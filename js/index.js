@@ -2,7 +2,8 @@
 
 //Creando funcion para agregar recetas
 function agregarReceta(titulo, ingredientes, instrucciones, categoria, foto) {
-   if(recetas.some(receta => receta.titulo === titulo)){
+   //el if verifica si la receta ya existe
+    if(recetas.some(receta => receta.titulo === titulo)){
         alert("La receta ya existe");
    }else{
     let  receta = { //se crea el objeto receta para una facil manipulacion de sus caracteristicas
@@ -27,7 +28,7 @@ document.getElementById("agregar-receta").addEventListener("submit", function (e
     const categoria = document.getElementById("categoria").value;
     const foto = document.getElementById("foto").value
     agregarReceta(titulo, ingredientes, instrucciones, categoria, foto);
-    form.reset(); // limpiamos el formulario por motivos esteticos
+    form.reset(); // limpiamos el formulario por motivos esteticos aun cuando no se agrega la receta
 });
 
 //renderizamos o dibujamos las recetas 
