@@ -53,6 +53,7 @@ function mostrarRecetas() {
     });
 }
 
+//se elimina la receta
 function eliminarReceta(id){
     recetas = recetas.filter(receta => receta.id !== id);
     mostrarRecetas(); // Refresh the displayed list after deletion
@@ -60,12 +61,13 @@ function eliminarReceta(id){
 }   
 
 function buscarReceta() {
-
-    const busqueda = document.getElementById("busqueda").value.toLowerCase();
-    const resultadoBusqueda = recetas.filter(receta => receta.titulo.toLowerCase().includes(busqueda));
+    //se genera la busqueda
+    const busqueda = document.getElementById("busqueda").value.toLowerCase();//con el toLowerCase() hacemos que la busqueda no sea sensible a mayusculas y minusculas
+    const resultadoBusqueda = recetas.filter(receta => receta.titulo.toLowerCase().includes(busqueda)); // con el toLowerCase permite que la busqueda no sea sensible a mayusculas y minusculas
+    
+    //se renderiza la busqueda
     const listaRecetasEncontradas = document.getElementById("recetas-encontradas");
     listaRecetasEncontradas.innerHTML = "";
-
     resultadoBusqueda.forEach(receta => {
         const elementoLista = document.createElement("li");
         elementoLista.innerHTML = `
@@ -86,6 +88,7 @@ function buscarReceta() {
     });
 }
 
+//funcion creaada para que cuando se de click a inicio se borre los elementos buscados
 function inicio(){
     const inicio= document.getElementById("recetas-encontradas");
     inicio.innerHTML="";
