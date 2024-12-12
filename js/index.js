@@ -41,10 +41,10 @@ function mostrarRecetas() {
         <div>
             <img src="${receta.foto}" alt="...">
             <div>
-                <h5 class="card-title" id="${receta.titulo}">${receta.titulo}</h5>
-                <p class="card-text">${receta.ingredientes}</p>
-                <p class="card-text">${receta.instrucciones}</p>
-                <p class="card-text">${receta.categoria}</p>
+                <h5>${receta.titulo}</h5>
+                <p>${receta.ingredientes}</p>
+                <p>${receta.instrucciones}</p>
+                <p>${receta.categoria}</p>
             </div>
             <button onclick="eliminarReceta(${receta.id})">Eliminar</button>
         </div>
@@ -57,12 +57,37 @@ function eliminarReceta(id){
     recetas = recetas.filter(receta => receta.id !== id);
     mostrarRecetas(); // Refresh the displayed list after deletion
     alert("Receta Eliminada");
-}
+}   
 
 function buscarReceta() {
-    const titulo = document.getElementById("buscar-receta").value;
-    const recetasEncontradas = recetas.filter(receta => receta.titulo === titulo);
-    window.location.href = "#recetasEncontradas";
-    
+
+    const busqueda = document.getElementById("busqueda").value.toLowerCase();
+    const resultadoBusqueda = recetas.filter(receta => receta.titulo.toLowerCase().includes(busqueda));
+    const listaRecetasEncontradas = document.getElementById("recetas-encontradas");
+    listaRecetasEncontradas.innerHTML = "";
+
+    resultadoBusqueda.forEach(receta => {
+        const elementoLista = document.createElement("li");
+        elementoLista.innerHTML = `
+        <div>
+            <img src="${receta.foto}" alt="...">
+            <div>
+                <h5>${receta.titulo}</h5>
+                <p>${receta.ingredientes}</p>
+                <p>${receta.instrucciones}</p>
+                <p>${receta.categoria}</p>
+            </div>
+        </div>
+        `;
+        listaRecetasEncontradas.appendChild(elementoLista);
+        //limpiamos el input de busqueda
+        const formBusqueda=document.getElementById("buscar-receta");
+        formBusqueda.reset(); 
+    });
+}
+
+function inicio(){
+    const inicio= document.getElementById("recetas-encontradas");
+    inicio.innerHTML="";
 }
 

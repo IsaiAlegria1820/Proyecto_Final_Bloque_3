@@ -14,9 +14,10 @@
         <div>
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Agregar Receta</a></li>
-                    <li><a href="#">Recetas</a></li>
+                    <li><a href="#" onclick="inicio()">Inicio</a></li>
+                    <li><a href="#agregar-recetas">Agregar Receta</a></li>
+                    <li><a href="#recetas">Recetas</a></li>
+                    <li><a href="#recetas-encontradas">Recetas buscadas</a></li>
                 </ul>
             </nav>    
         </div>
@@ -28,7 +29,12 @@
         </div>
         </header>
     <main>
-        <section>
+        <article>
+            <ul id="recetas-encontradas">
+
+            </ul>
+        </article>
+        <section id="agregar-recetas">
             <h2>Agregar Receta</h2>
             <form id="agregar-receta">
                 <label for="titulo">Título:</label>
