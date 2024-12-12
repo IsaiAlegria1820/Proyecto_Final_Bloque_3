@@ -22,8 +22,8 @@
         </div>
         <div>
             <form id="buscar-receta">
-                <input type="text" placeholder="Buscar por título">
-                <button type="submit">Buscar</button>
+                <input type="text" placeholder="Buscar por título" id="busqueda">
+                <button type="submit" onclick="buscarReceta()">Buscar</button>
             </form>
         </div>
         </header>
@@ -33,14 +33,19 @@
             <form id="agregar-receta">
                 <label for="titulo">Título:</label>
                 <input type="text" id="titulo" name="titulo" required>
+
                 <label for="ingredientes">Ingredientes:</label>
                 <textarea id="ingredientes" name="ingredientes" required></textarea>
+
                 <label for="instrucciones">Pasos:</label>
                 <textarea id="instrucciones" name="instrucciones" required></textarea>
+
                 <label for="categoria">Categoría:</label>
                 <input type="text" id="categoria" required>
+
                 <label for="foto">Foto:</label>
-                <input type="file" id="foto" required></label>
+                <input type="url" id="foto" required>
+
                 <button type="submit">Agregar Receta</button>
             </form>
         </section>
