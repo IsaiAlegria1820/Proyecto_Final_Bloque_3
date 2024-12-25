@@ -8,19 +8,20 @@
 </head>
 <body>
     <header>
-        <div class="flex text-center align-center justify-center">
+        <div class="grid columna-3 align-center justify-center p-sm">
+            <img width="100x100" src="assets/img/logo.jpg" class="logo" alt="logito jpg">
             <h1>Recetario de la Tia Vero</h1>
         </div>
-        <div class="flex space-between p-md">
-            <nav class="flex gap-lg">
+        <div class="flex space-between p-xsm">
+            <nav class="flex gap-lg align-center justify-center links">
                 <a href="#" onclick="inicio()">Inicio</a>
                 <a href="#agregar-recetas">Agregar Receta</a>
                 <a href="#recetas">Recetas</a>
                 <a href="#recetas-encontradas">Recetas buscadas</a>
             </nav>    
-            <form id="buscar-receta" class="flex justify-center align-center gap-md">
+            <form id="buscar-receta" class="flex justify-center align-center gap-xsm">
                 <input type="text" placeholder="Buscar por título" id="busqueda" class="input p-xsm">
-                <button type="submit" onclick="buscarReceta()" class="btn p-sm text-center"> <img src="assets/img/icono_buscar.png" alt="buscar png">Buscar</button>
+                <button type="submit" onclick="buscarReceta()" class="btn p-xsm grid columna text-center align-center gap-xsm "> <img src="assets/img/icono_buscar.png" alt="buscar png">Buscar</button>
             </form>
         </div>
         </header>

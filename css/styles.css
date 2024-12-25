@@ -32,8 +32,19 @@ h1{
     display: grid;
 }
 
+.columna{
+    grid-template-columns: repeat(2,1fr);
+}
+.columna-3{
+    grid-template-columns: 3fr 4fr 1fr;
+}
+
 .space-between{
     justify-content: space-between;
+}
+
+.align-start{
+    align-items: start;
 }
 
 .justify-center{
@@ -76,6 +87,10 @@ h1{
     gap: 6rem;
 }
 
+/*logo*/
+.logo{
+    border-radius: 50%;
+}
 /*formularios*/
 .input{
     border-radius: 20px;
@@ -86,4 +101,21 @@ h1{
     border: 0;
     border-radius: 15px;
     background-color: blueviolet;
+    color: white;
+}
+
+/*efectos*/
+.btn:hover{
+    background-color: white;
+    color:hotpink;
+    transition: 0.25s;
+}
+
+.links a:hover{
+    margin:1rem;
+    padding:0.5rem;
+    background-color:white;
+    color:hotpink;
+    transition: 0.25s;
+    border-radius: 15px;
 }
