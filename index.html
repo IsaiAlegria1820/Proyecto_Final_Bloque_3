@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recetario de la Tia Vero</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="grid columna-3 align-center justify-center p-sm">
-            <img width="100x100" src="assets/img/logo.jpg" class="logo" alt="logito jpg">
-            <h1>Recetario de la Tia Vero</h1>
-        </div>
-        <div class="flex space-between p-xsm">
-            <nav class="flex gap-lg align-center justify-center links">
-                <a href="#" onclick="inicio()">Inicio</a>
-                <a href="#agregar-recetas">Agregar Receta</a>
-                <a href="#recetas">Recetas</a>
-                <a href="#recetas-encontradas">Recetas buscadas</a>
-            </nav>    
-            <form id="buscar-receta" class="flex justify-center align-center gap-xsm">
-                <input type="text" placeholder="Buscar por título" id="busqueda" class="input p-xsm">
-                <button type="submit" onclick="buscarReceta()" class="btn p-xsm grid columna text-center align-center gap-xsm "> <img src="assets/img/icono_buscar.png" alt="buscar png">Buscar</button>
-            </form>
-        </div>
-        </header>
+      <div class="grid columna-3 align-center justify-center p-sm">
+        <img
+          width="100x100"
+          src="assets/img/logo.jpg"
+          class="logo"
+          alt="logito jpg"
+        />
+        <h1>Recetario de la Tia Vero</h1>
+      </div>
+      <div class="flex space-between p-xsm">
+        <nav class="flex gap-lg align-center justify-center links">
+          <a href="#" onclick="inicio()">Inicio</a>
+          <a href="#agregar-recetas">Agregar Receta</a>
+          <a href="#recetas">Recetas</a>
+          <a href="#recetas-encontradas">Recetas buscadas</a>
+        </nav>
+        <form
+          id="buscar-receta"
+          class="flex justify-center align-center gap-xsm"
+        >
+          <input
+            type="text"
+            placeholder="Buscar por título"
+            id="busqueda"
+            class="input p-xsm"
+          />
+          <button
+            type="submit"
+            onclick="buscarReceta()"
+            class="btn p-xsm grid columna text-center align-center gap-xsm"
+          >
+            <img src="assets/img/icono_buscar.png" alt="buscar png" />Buscar
+          </button>
+        </form>
+      </div>
+    </header>
     <main>
-        <article>
-            <ul id="recetas-encontradas">
+      <br />
+      <article>
+        <ul id="recetas-encontradas"></ul>
+      </article>
+      <br />
+      <section id="agregar-recetas" class="">
+        <h2 class="p-sm">Agregar Receta</h2>
+        <form id="agregar-receta" class="flex column-flex container p-sm">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required />
 
-            </ul>
-        </article>
-        <section id="agregar-recetas">
-            <h2>Agregar Receta</h2>
-            <form id="agregar-receta">
-                <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" required>
+          <label for="ingredientes">Ingredientes:</label>
+          <textarea id="ingredientes" name="ingredientes" required></textarea>
 
-                <label for="ingredientes">Ingredientes:</label>
-                <textarea id="ingredientes" name="ingredientes" required></textarea>
+          <label for="instrucciones">Pasos:</label>
+          <textarea id="instrucciones" name="instrucciones" required></textarea>
 
-                <label for="instrucciones">Pasos:</label>
-                <textarea id="instrucciones" name="instrucciones" required></textarea>
+          <label for="categoria">Categoría:</label>
+          <input type="text" id="categoria" required />
 
-                <label for="categoria">Categoría:</label>
-                <input type="text" id="categoria" required>
-
-                <label for="foto">Foto:</label>
-                <input type="url" id="foto" required>
-
-                <button type="submit">Agregar Receta</button>
-            </form>
-        </section>
-        <article>
-            <h2>Recetas</h2>
-            <ul id="recetas">
-
-            </ul>
-        </article>
-
+          <label for="foto">Foto:</label>
+          <input type="url" id="foto" required />
+          <br />
+          <button type="submit" class="btn p-sm">Agregar Receta</button>
+        </form>
+      </section>
+      <article>
+        <h2>Recetas</h2>
+        <ul id="recetas"></ul>
+      </article>
     </main>
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>

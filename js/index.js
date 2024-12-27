@@ -23,8 +23,8 @@ document.getElementById("agregar-receta").addEventListener("submit", function (e
     event.preventDefault();
     const form = document.getElementById("agregar-receta");
     const titulo = document.getElementById("titulo").value;
-    const ingredientes = document.getElementById("ingredientes").value.split(",");
-    const instrucciones = document.getElementById("instrucciones").value.split("\n");
+    const ingredientes = document.getElementById("ingredientes").value.split(","); //agregamos ingredientes indicando que sean separados por comas
+    const instrucciones = document.getElementById("instrucciones").value.split("\n"); //agregamos instrucciones indicando que sean separados con un salto de linea
     const categoria = document.getElementById("categoria").value;
     const foto = document.getElementById("foto").value
     agregarReceta(titulo, ingredientes, instrucciones, categoria, foto);
