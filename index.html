@@ -56,10 +56,10 @@
           <label for="titulo">Título:</label>
           <input type="text" id="titulo" name="titulo" required />
 
-          <label for="ingredientes">Ingredientes:</label>
+          <label for="ingredientes">Ingredientes: (seprarado por comas)</label>
           <textarea id="ingredientes" name="ingredientes" required></textarea>
 
-          <label for="instrucciones">Pasos:</label>
+          <label for="instrucciones">Pasos: (separado por salto de linea)</label>
           <textarea id="instrucciones" name="instrucciones" required></textarea>
 
           <label for="categoria">Categoría:</label>
@@ -72,8 +72,10 @@
         </form>
       </section>
       <article>
-        <h2>Recetas</h2>
-        <ul id="recetas"></ul>
+        <h2 class="p-sm">Recetas</h2>
+        <ul id="recetas" class="grid gap-sm">
+
+        </ul>
       </article>
     </main>
     <script src="js/index.js"></script>

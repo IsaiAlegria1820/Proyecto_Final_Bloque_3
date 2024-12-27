@@ -69,9 +69,9 @@ h2{
 
 /*container*/
 .container{
-    width:70%;
+    width:60%;
     margin: auto;
-    border: 1px solid gray;   
+    border: 1px solid hotpink;   
     border-radius:15px; 
 }
 /*formulario*/
@@ -96,8 +96,28 @@ h2{
     margin: 0 auto;   
 }
 
+.card{
+    width: 60%;
+    text-align: center;
+        
+}
 
+.card img{
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 2px hotpink;
+}
 
+.card p{
+    font-size: large;
+    padding: 0.5rem;
+    text-align: justify;
+}
+
+.card h5{
+    padding: 0.5rem;
+    font-size: 1.5em;
+    color: blueviolet;
+}
 
 /*unidades y medidas*/
 

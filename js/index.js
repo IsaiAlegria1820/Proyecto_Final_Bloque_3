@@ -38,16 +38,17 @@ function mostrarRecetas() {
 
     recetas.forEach(receta => {
         const elementoLista = document.createElement("li");
+
         elementoLista.innerHTML = `
-        <div>
-            <img src="${receta.foto}" alt="...">
+        <div class="container card p-sm">
+            <img src="${receta.foto}" alt="..." >
             <div>
                 <h5>${receta.titulo}</h5>
                 <p>${receta.ingredientes}</p>
                 <p>${receta.instrucciones}</p>
                 <p>${receta.categoria}</p>
             </div>
-            <button onclick="eliminarReceta(${receta.id})">Eliminar</button>
+            <button onclick="eliminarReceta(${receta.id})" class="btn p-sm">Eliminar</button>
         </div>
         `;
         listaRecetas.appendChild(elementoLista);
@@ -75,7 +76,7 @@ function buscarReceta() {
     resultadoBusqueda.forEach(receta => {
         const elementoLista = document.createElement("li");
         elementoLista.innerHTML = `
-        <div>
+        <div class="container card p-sm">
             <img src="${receta.foto}" alt="...">
             <div>
                 <h5>${receta.titulo}</h5>
