@@ -85,12 +85,13 @@ function buscarReceta() {
                 <p>${receta.instrucciones}</p>
                 <p>${receta.categoria}</p>
             </div>
+            <button onclick="eliminarReceta('${receta.titulo}')" class="btn p-sm">Eliminar</button>
         </div>
         `;
         listaRecetasEncontradas.appendChild(elementoLista);
         //limpiamos el input de busqueda
-        //const formBusqueda=document.getElementById("buscar-receta");
-        //formBusqueda.reset(); 
+        const formBusqueda=document.getElementById("buscar-receta");
+        formBusqueda.reset(); 
     });
 }
 
