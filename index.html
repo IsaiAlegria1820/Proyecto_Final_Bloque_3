@@ -20,28 +20,16 @@
       <div class="flex space-between p-xsm">
         <nav class="flex gap-lg align-center justify-center links">
           <a href="#" onclick="inicio()">Inicio</a>
-          <a href="#agregar-recetas">Agregar Receta</a>
-          <a href="#recetas">Recetas</a>
+          <a href="#agregar-receta">Agregar Receta</a>
+          <a href="#recetasAgregadas">Recetas</a>
           <a href="#recetas-encontradas">Recetas buscadas</a>
         </nav>
-        <form
-          id="buscar-receta"
-          class="flex justify-center align-center gap-xsm"
-        >
-          <input
-            type="text"
-            placeholder="Buscar por título"
-            id="busqueda"
-            class="input p-xsm"
-          />
-          <button
-            type="submit"
-            onclick="buscarReceta()"
-            class="btn p-xsm grid columna text-center align-center gap-xsm"
-          >
+        <div class="flex justify-center align-center gap-xsm">
+          <input type="text" placeholder="Buscar por título" id="busqueda" class="input p-xsm"/>
+          <button onclick="buscarReceta()" class="btn p-xsm grid columna text-center align-center gap-xsm">
             <img src="assets/img/icono_buscar.png" alt="buscar png" />Buscar
           </button>
-        </form>
+        </div>
       </div>
     </header>
     <main>
@@ -50,7 +38,7 @@
         <ul id="recetas-encontradas"class="grid gap-sm"></ul>
       </article>
       <br />
-      <section id="agregar-recetas" class="">
+      <section>
         <h2 class="p-sm">Agregar Receta</h2>
         <form id="agregar-receta" class="flex column-flex container p-sm">
           <label for="titulo">Título:</label>
