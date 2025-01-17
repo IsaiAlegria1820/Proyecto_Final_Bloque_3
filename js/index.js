@@ -33,7 +33,7 @@ document.getElementById("agregar-receta").addEventListener("submit", function (e
 
 //renderizamos o dibujamos las recetas 
 function mostrarRecetas() {
-    const listaRecetas = document.getElementById("recetas");
+    const listaRecetas = document.getElementById("recetasAgregadas");
     listaRecetas.innerHTML = ""; //limpiamos el espacio donde se ven las recetas
 
     recetas.forEach(receta => {
@@ -65,33 +65,7 @@ function eliminarReceta(id){
     }     
 }   
 
-function buscarReceta() {
-    //se genera la busqueda
-    const busqueda = document.getElementById("busqueda").value.toLowerCase();//con el toLowerCase() hacemos que la busqueda no sea sensible a mayusculas y minusculas
-    const resultadoBusqueda = recetas.filter(receta => receta.titulo.toLowerCase().includes(busqueda)); // con el toLowerCase permite que la busqueda no sea sensible a mayusculas y minusculas
-    
-    //se renderiza la busqueda
-    const listaRecetasEncontradas = document.getElementById("recetas-encontradas");
-    listaRecetasEncontradas.innerHTML = "";
-    resultadoBusqueda.forEach(receta => {
-        const elementoLista = document.createElement("li");
-        elementoLista.innerHTML = `
-        <div class="container card p-sm">
-            <img src="${receta.foto}" alt="...">
-            <div>
-                <h5>${receta.titulo}</h5>
-                <p>${receta.ingredientes}</p>
-                <p>${receta.instrucciones}</p>
-                <p>${receta.categoria}</p>
-            </div>
-        </div>
-        `;
-        listaRecetasEncontradas.appendChild(elementoLista);
-        //limpiamos el input de busqueda
-        const formBusqueda=document.getElementById("buscar-receta");
-        formBusqueda.reset(); 
-    });
-}
+
 
 //funcion creaada para que cuando se de click a inicio se borre los elementos buscados
 function inicio(){
